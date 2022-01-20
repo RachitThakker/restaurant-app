@@ -1,5 +1,5 @@
 .intro-body__header {
-  background-image: linear-gradient(45deg, #f66f09, #0990f6);
+  background-image: linear-gradient(90deg, #f66f09, #0990f6);
   text-align: center;
   width: 100vw;
   position: fixed;
@@ -28,4 +28,14 @@ nav a {
 .intro-nav__list-item:hover {
   background-color: #14dcb4;
   color: black;
+}
+.about-us {
+  margin-top: -1rem;
+  background-color: #f67409a4;
+  height: 78.25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

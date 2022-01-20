@@ -8,7 +8,7 @@ const Intro = () => {
       </header>
       <nav>
         <ul className="intro-nav__list">
-          <a href="#" className="intro-nav__list-item">
+          <a href="#about-us-id" className="intro-nav__list-item">
             <li>About Us</li>
           </a>
           <a href="#" className="intro-nav__list-item">
@@ -22,7 +22,7 @@ const Intro = () => {
           </a>
         </ul>
       </nav>
-      <div className="about-us">
+      <div className="about-us" id="about-us-id">
         <h3>
           We make Pizzas so delicious you'll faint just thinking about them!
         </h3>
