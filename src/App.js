@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <title>PizzaTime Restaurant App</title>
       <Intro />
-      {/* <Main /> */}
-      {/* <End /> */}
+      <Main />
+      <End />
     </div>
   );
 }
