@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ItemGroup.css";
+import Item from "./Item";
 
 const ItemGroup = (props) => {
   let items;
@@ -91,17 +92,19 @@ const ItemGroup = (props) => {
     <div>
       {!isExpanded && (
         <div className="groupItem-div__closed">
-          <div>
+          <div className="groupItem-div__closed__content">
             <h3>{props.groupName}</h3>
             <button className="button-expand" onClick={expandHandler}>
               Show Items
             </button>
           </div>
-          <div></div>
         </div>
       )}
 
-      {/* Add condition for render when menu is expanded. */}
+      {isExpanded &&
+        items.forEach((item) => {
+          <Item itemInfo={item} onCollapse={expandHandler} />;
+        })}
     </div>
   );
 };

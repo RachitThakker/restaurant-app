@@ -32,10 +32,11 @@ nav a {
 .about-us {
   margin-top: -1rem;
   background-color: #f67409a4;
-  height: 78.25vh;
+  height: 82vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 25px;
 }

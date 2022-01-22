@@ -1,0 +1,24 @@
+.groupItem-div__closed {
+  width: 90vw;
+  background-color: #ff8928e7;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+}
+.groupItem-div__closed__content {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.button-expand {
+  background-color: rgb(55, 55, 109);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  align-self: center;
+  font-family: inherit;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.button-expand:hover {
+  background-color: rgb(27, 27, 77);
+}

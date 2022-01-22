@@ -6,6 +6,9 @@ const Menu = (props) => {
 
   return (
     <div className="menu-outer">
+      <div className="menu-heading">
+        <h2>Menu</h2>
+      </div>
       {groupedItems.map((group) => (
         <ItemGroup groupName={group} />
       ))}

@@ -1,0 +1,17 @@
+.menu-outer {
+  background-color: #098ff67c;
+  /* margin-top: -1.25rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-heading {
+  background-color: rgb(61, 61, 61);
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding: 1px 0 1px 0;
+  width: 100vw;
+}
