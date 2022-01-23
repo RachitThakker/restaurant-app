@@ -114,13 +114,21 @@ const ItemGroup = (props) => {
     )
   }
 
+  // if (isExpanded) {
+  //   return (
+  //     <div>
+  //       {isExpanded &&
+  //       (items.forEach((item) => <Item itemInfo={item} onCollapse={expandHandler} /> ))}
+  //     </div>
+  //   )
+  // }
+
   if (isExpanded) {
     return (
-      <div>
-        {isExpanded &&
-        (items.forEach((item) => <Item itemInfo={item} onCollapse={expandHandler} /> ))}
-      </div>
-    )
+      <div className="expanded-outer">
+        <div className="button-collapse-div"><button className="button-collapse" onClick={expandHandler}>Hide {props.groupName} Items</button></div>
+        { items.map((itemObj) => <Item itemInfo={itemObj}></Item> )}
+      </div> )
   }
 
   /*return (
