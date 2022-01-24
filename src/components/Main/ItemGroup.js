@@ -13,7 +13,7 @@ const ItemGroup = (props) => {
         price: "89",
         // imgUrl: "../../../images/pizza-3000285_640.png",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -22,7 +22,7 @@ const ItemGroup = (props) => {
         ingredients: "Jalapenos, Corn, Onion, Olives, Spicy Sauce.",
         price: "129",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -31,7 +31,7 @@ const ItemGroup = (props) => {
         ingredients: "Really? No, Really?",
         price: "999",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
     ];
@@ -45,7 +45,7 @@ const ItemGroup = (props) => {
         ingredients: "White Sauce, Bell Pepper, Capsicum, Jalapenos",
         price: "119",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -54,7 +54,7 @@ const ItemGroup = (props) => {
         ingredients: "Light Tomato Sauce, Onion, Corn, Olives",
         price: "109",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -63,7 +63,7 @@ const ItemGroup = (props) => {
         ingredients: "According to chef's mood which isn't always good.",
         price: "149",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
     ];
@@ -77,7 +77,7 @@ const ItemGroup = (props) => {
         ingredients: "Cabbage, Capsicum, Pineapple, Mayonaisse",
         price: "99",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -86,7 +86,7 @@ const ItemGroup = (props) => {
         ingredients: "Aloo Patty, Lettuce, Cabbage, Capsicum, Orange Sauce",
         price: "109",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
       {
@@ -95,7 +95,7 @@ const ItemGroup = (props) => {
         ingredients: "Paneer Tikka, Lettuce, Tomatoes, Orange Sauce",
         price: "119",
         imgUrl:
-          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
+          "https://github.com/RachitThakker/restaurant-app/blob/main/images/pizza-3000285_640.png",
         quantity: "0",
       },
     ];
