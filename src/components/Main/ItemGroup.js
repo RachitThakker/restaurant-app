@@ -8,10 +8,12 @@ const ItemGroup = (props) => {
     items = [
       {
         id: Math.random.toString(),
-        dishName: "Margharita",
+        dishName: "Margherita",
         ingredients: "Just cheese. Laziest pizza ever.",
         price: "89",
-        imgUrl: "",
+        // imgUrl: "../../../images/pizza-3000285_640.png",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -19,7 +21,8 @@ const ItemGroup = (props) => {
         dishName: "Mexican Loaded",
         ingredients: "Jalapenos, Corn, Onion, Olives, Spicy Sauce.",
         price: "129",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -27,7 +30,8 @@ const ItemGroup = (props) => {
         dishName: "Pineapple Pizza",
         ingredients: "Really? No, Really?",
         price: "999",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
     ];
@@ -40,7 +44,8 @@ const ItemGroup = (props) => {
         dishName: "Alfredo Pasta",
         ingredients: "White Sauce, Bell Pepper, Capsicum, Jalapenos",
         price: "119",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -48,7 +53,8 @@ const ItemGroup = (props) => {
         dishName: "Tomato Pasta",
         ingredients: "Light Tomato Sauce, Onion, Corn, Olives",
         price: "109",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -56,7 +62,8 @@ const ItemGroup = (props) => {
         dishName: "Chef's Special Pasta",
         ingredients: "According to chef's mood which isn't always good.",
         price: "149",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
     ];
@@ -69,7 +76,8 @@ const ItemGroup = (props) => {
         dishName: "Sweet Panini",
         ingredients: "Cabbage, Capsicum, Pineapple, Mayonaisse",
         price: "99",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -77,7 +85,8 @@ const ItemGroup = (props) => {
         dishName: "Aloo Tikki",
         ingredients: "Aloo Patty, Lettuce, Cabbage, Capsicum, Orange Sauce",
         price: "109",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
       {
@@ -85,7 +94,8 @@ const ItemGroup = (props) => {
         dishName: "Paneer Love",
         ingredients: "Paneer Tikka, Lettuce, Tomatoes, Orange Sauce",
         price: "119",
-        imgUrl: "",
+        imgUrl:
+          "https://pixabay.com/get/g72b7ac4e9ded518710983a90b18cb09d3e29ccab4dab7f18ce676e09e7bf1cade93aeeccc491c20223b2a582f40b601c_640.png",
         quantity: "0",
       },
     ];
@@ -93,25 +103,32 @@ const ItemGroup = (props) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const expandHandler = () => {
+  const expandHandler = (event) => {
+    //Add two-way binding to input quantity to always display user selected value.
     isExpanded ? setIsExpanded(false) : setIsExpanded(true);
+  };
+
+  const newItemHandler = (newItems) => {
+    // console.log("From ItemGroup.js");
+    // console.log(newItems);
+    props.passUp(newItems);
   };
 
   if (!isExpanded) {
     return (
       <div>
         {!isExpanded && (
-        <div className="groupItem-div__closed">
-          <div className="groupItem-div__closed__content">
-            <h3>{props.groupName}</h3>
-            <button className="button-expand" onClick={expandHandler}>
-              Show Items
-            </button>
+          <div className="groupItem-div__closed">
+            <div className="groupItem-div__closed__content">
+              <h3>{props.groupName}</h3>
+              <button className="button-expand" onClick={expandHandler}>
+                Show Items
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </div>
-    )
+    );
   }
 
   // if (isExpanded) {
@@ -126,9 +143,16 @@ const ItemGroup = (props) => {
   if (isExpanded) {
     return (
       <div className="expanded-outer">
-        <div className="button-collapse-div"><button className="button-collapse" onClick={expandHandler}>Hide {props.groupName} Items</button></div>
-        { items.map((itemObj) => <Item itemInfo={itemObj}></Item> )}
-      </div> )
+        <div className="button-collapse-div">
+          <button className="button-collapse" onClick={expandHandler}>
+            Hide {props.groupName} Items
+          </button>
+        </div>
+        {items.map((itemObj) => (
+          <Item itemInfo={itemObj} passUp={newItemHandler} />
+        ))}
+      </div>
+    );
   }
 
   /*return (

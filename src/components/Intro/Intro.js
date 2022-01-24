@@ -11,13 +11,13 @@ const Intro = () => {
           <a href="#about-us-id" className="intro-nav__list-item">
             <li>About Us</li>
           </a>
-          <a href="#" className="intro-nav__list-item">
+          <a href="#menu-link" className="intro-nav__list-item">
             <li>Menu</li>
           </a>
-          <a href="#" className="intro-nav__list-item">
+          <a href="#cart-link" className="intro-nav__list-item">
             <li>Cart</li>
           </a>
-          <a href="#" className="intro-nav__list-item">
+          <a href="#contact-link" className="intro-nav__list-item">
             <li>Contact Us</li>
           </a>
         </ul>
