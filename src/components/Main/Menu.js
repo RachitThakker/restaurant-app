@@ -2,7 +2,20 @@ import "./Menu.css";
 import ItemGroup from "./ItemGroup";
 
 const Menu = (props) => {
-  const groupedItems = ["Pizza", "Pasta", "Sandwich"];
+  const groupedItems = [
+    {
+      id: Math.random().toString(),
+      name: "Pizza",
+    },
+    {
+      id: Math.random().toString(),
+      name: "Pasta",
+    },
+    {
+      id: Math.random().toString(),
+      name: "Sandwich",
+    },
+  ];
 
   const itemsHandler = (itemsArray) => {
     // console.log("From Menu.js: ");
@@ -16,7 +29,11 @@ const Menu = (props) => {
         <h2>Menu</h2>
       </div>
       {groupedItems.map((group) => (
-        <ItemGroup groupName={group} passUp={itemsHandler} />
+        <ItemGroup
+          key={group.id}
+          groupName={group.name}
+          passUp={itemsHandler}
+        />
       ))}
     </div>
   );
