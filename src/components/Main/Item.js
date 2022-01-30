@@ -1,16 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Item.css";
+import CartContext from "../../store/cart-context";
+
+let cartItems = [];
 
 const Item = (props) => {
-  const [itemQuantity, setItemQuantity] = useState("0");
+  const [itemQuantity, setItemQuantity] = useState({
+    id: props.itemInfo.id,
+    itemName: props.itemInfo.dishName,
+    itemPrice: Number(props.itemInfo.price),
+    quantity: "0",
+  });
+  const cartCtx = useContext(CartContext);
 
   const quantityHandler = (event) => {
-    setItemQuantity(event.target.value);
-    props.itemInfo.quantity = +event.target.value;
-    // console.log("From Item.js");
-    // console.log(props.itemInfo);
-    props.passUp(props.itemInfo);
+    setItemQuantity((prevState) => {
+      return {
+        ...prevState,
+        quantity: +event.target.value,
+      };
+    });
   };
+
+  useEffect(() => {
+    if (itemQuantity.quantity !== "0") {
+      let resultObj = cartItems.find(
+        (itemObj) => itemObj.itemName === itemQuantity.itemName
+      );
+      if (resultObj) {
+        resultObj.quantity = itemQuantity.quantity;
+      } else {
+        cartItems.push(itemQuantity);
+      }
+    }
+
+    let cartItems2 = cartItems.filter((el) => {
+      return el.quantity !== 0;
+    });
+
+    // console.log(cartItems2);
+    cartCtx.assignItemsArray(cartItems2);
+  }, [itemQuantity]);
 
   return (
     <div className="item-container">
@@ -24,6 +54,15 @@ const Item = (props) => {
           min="0"
           max="10"
           step="1"
+          // value={
+          //   cartItems.find(
+          //     (itemObj) => itemObj.itemName === props.itemInfo.dishName
+          //   )
+          //     ? cartItems.find(
+          //         (itemObj) => itemObj.itemName === props.itemInfo.dishName
+          //       ).quantity
+          //     : ""
+          // }
           onChange={quantityHandler}
         />
       </div>

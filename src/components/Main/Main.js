@@ -1,21 +1,35 @@
 import "./Main.css";
 import Menu from "./Menu";
 import Cart from "./Cart";
+import CartProvider from "../../store/CartProvider";
 
 const Main = () => {
-  let items;
+  // let items = [];
 
-  const updatedItemsHandler = (updatedItems) => {
-    // console.log("From Main.js");
-    // console.log(updatedItems);
-    items = updatedItems;
-  };
+  // const updatedItemsHandler = (cartItems) => {
+  //   items = cartItems.filter((el) => {
+  //     return el.quantity !== "0";
+  //   });
+  //   console.log("From Main.js");
+  //   console.log(items);
+  //   items.map((item) => {
+  //     return localStorage.setItem(item.itemName, item.quantity);
+  //   });
+  //   if (items.length === 0) {
+  //     localStorage.clear();
+  //   }
+  //   for (const item of items) {
+  //     if (item.quantity === 0 || item.quantity === "0") {
+  //       localStorage.removeItem(item.itemName);
+  //     }
+  //   }
+  // };
 
   return (
-    <div className="main-div">
-      <Menu passUp={updatedItemsHandler} />
-      <Cart id="cart-link" newItems={items} />
-    </div>
+    <CartProvider>
+      <Menu />
+      <Cart />
+    </CartProvider>
   );
 };
 

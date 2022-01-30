@@ -1,0 +1,6 @@
+Convert items variable in ItemGroup.js to state variable.
+Fix position of Nav-bar on big screens
+Give button-menu for Nav-bar on mobile screens
+Add two-way binding for food item quantity input
+Find seperate images for items
+Find solution for the local image url problem

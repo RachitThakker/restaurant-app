@@ -1,6 +1,6 @@
 .App {
   @import url("http://fonts.cdnfonts.com/css/gotham");
-  background: url("../images/pizza-5179939_1920.jpg");
+  background: url("./images/pizza-5179939_1920.jpg");
   display: block;
   position: relative;
   font-family: "Gotham", sans-serif;

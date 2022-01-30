@@ -17,10 +17,8 @@ const Menu = (props) => {
     },
   ];
 
-  const itemsHandler = (itemsArray) => {
-    // console.log("From Menu.js: ");
-    // console.log(itemsArray);
-    props.passUp(itemsArray);
+  const itemsHandler = (cartItems) => {
+    props.passUp(cartItems);
   };
 
   return (
