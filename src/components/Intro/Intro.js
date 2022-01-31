@@ -1,4 +1,6 @@
 import "./Intro.css";
+import sliceRight from "../../images/pizza-slice-right.png";
+import sliceLeft from "../../images/pizza-slice-left.png";
 
 const Intro = () => {
   return (
@@ -23,13 +25,17 @@ const Intro = () => {
         </ul>
       </nav>
       <div className="about-us" id="about-us-id">
-        <h3>
-          We make Pizzas so delicious you'll faint just thinking about them!
-        </h3>
-        <h3>
-          Our Pizzas are the HEALTHIEST because they are YOUR IMAGINATION!
-        </h3>
-        <h3>We give a 29-MINUTE Fainting Guarantee!*</h3>
+        <div className="about-us__card">
+          <img src={sliceRight} alt="pizza-slice-right" />
+          <h3>
+            We make Pizzas so delicious you'll faint just thinking about them!
+          </h3>
+          <h3>
+            Our Pizzas are the HEALTHIEST because they are YOUR IMAGINATION!
+          </h3>
+          <h3>We give a 29-MINUTE Fainting Guarantee!*</h3>
+          <img src={sliceLeft} alt="pizza-slice-left" />
+        </div>
       </div>
     </div>
   );
